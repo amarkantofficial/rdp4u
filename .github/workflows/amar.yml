@@ -23,6 +23,4 @@ jobs:
     - run: Set-LocalUser -Name "runneradmin" -Password (ConvertTo-SecureString -AsPlainText "P@ssw0rd!" -Force)
     - name: Create Tunnel "runneradmin"/"P@ssw0rd!"
       run: .\ngrok\ngrok.exe tcp 3389
-      run: | 
-        Invoke-WebRequest https://raw.githubusercontent.com/amarkantofficial/RDPbyAMAR/main/loop.ps1 -OutFile loop.ps1
-        ./loop.ps1
+      
